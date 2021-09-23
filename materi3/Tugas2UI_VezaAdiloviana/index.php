@@ -27,15 +27,15 @@
                     <div class="login">
                         <div class="card-body mt-4">
                             <h2 class="card-title text-center pb-3">LOGIN</h2>
-                            <form>
+                            <form action="garding.php" method="GET"> 
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="email" aria-describedby="email"
+                                    <input type="text" class="form-control" id="email" aria-describedby="email" name="email"
                                         placeholder="Email Address">
                                 </div>
                                 <div class="form-group pb-3">
                                     <input type="password" class="form-control" id="password" placeholder="Password">
                                 </div>
-                                <a href="garding.html"><button type="button" class="btn btn-primary">Login</button></a>
+                                <a href="garding.php"><button type="submit" class="btn btn-primary" name="btnlgn">Login</button></a>
                             </form>
                             <div class="lupa">
                                 <div class="text-right pt-2">
