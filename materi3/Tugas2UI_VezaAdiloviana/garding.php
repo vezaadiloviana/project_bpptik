@@ -94,7 +94,7 @@
         </div>
 
         <?php
-        
+        //membuat fungsi
         function total() {
             $mtk = $_POST['mtk'];
             $fisika = $_POST['fisika'];
@@ -223,6 +223,7 @@
         $isi = file_get_contents($file);
         $data = json_decode($isi, true);
 
+        //membuat array untuk membuat data
         $data[] = array(
              'Nama Siswa' => $_POST['email'],
              'Kelas' => $_POST['kelas'],
@@ -235,6 +236,7 @@
              'Grade Nilai' => grade()
         );
 
+        //mengirimkan data
         $jsonfile = json_encode($data, JSON_PRETTY_PRINT);
         $isi = file_put_contents($file, $jsonfile);
 
