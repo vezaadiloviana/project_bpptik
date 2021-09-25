@@ -4,7 +4,7 @@
 Sebuah aplikasi sederhana yang digunakan untuk menghitung total nilai, rata-rata nilai dan grade nilai untuk siswa, nilai yang di-inputkan adalah nilai matematika, fisika, biologi, dan TIK.
 Aplikasi ini dibuat menggunakan bahasa pemrograman PHP dan CSS framework Bootstrap.
 
-# REquirement
+# Requirement
 - PHP >= 5.0.0
 - Apache Server
 
