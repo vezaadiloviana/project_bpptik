@@ -1,0 +1,35 @@
+[
+    {
+        "Nama Siswa": "peja",
+        "Kelas": "Kelas-1",
+        "Nilai Matematika": "90",
+        "Nilai Fisika": "90",
+        "Nilai Biologi": "90",
+        "Nilai Tik": "90",
+        "Rata-Rata": 90,
+        "Total Nilai": 360,
+        "Grade Nilai": "A"
+    },
+    {
+        "Nama Siswa": "veza adiloviana",
+        "Kelas": "Kelas-1",
+        "Nilai Matematika": "80",
+        "Nilai Fisika": "70",
+        "Nilai Biologi": "90",
+        "Nilai Tik": "60",
+        "Rata-Rata": 75,
+        "Total Nilai": 300,
+        "Grade Nilai": "B"
+    },
+    {
+        "Nama Siswa": "Budi",
+        "Kelas": "Kelas-1",
+        "Nilai Matematika": "80",
+        "Nilai Fisika": "70",
+        "Nilai Biologi": "60",
+        "Nilai Tik": "90",
+        "Rata-Rata": 75,
+        "Total Nilai": 300,
+        "Grade Nilai": "B"
+    }
+]

@@ -29,7 +29,8 @@
                             <label for="nama">Nama</label>
                         </div>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" id="email" name="email" value="<?php echo $_GET["email"] ?>">
+                            <input type="text" class="form-control" id="email" name="email"
+                                value="<?php echo $_GET["email"] ?>">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -37,7 +38,7 @@
                             <label for="kelas">Kelas</label>
                         </div>
                         <div class="col-md-10">
-                            <select class="form-control"  id="kelas" name="kelas">
+                            <select class="form-control" id="kelas" name="kelas">
                                 <option value="" disabled selected>Kelas</option>
                                 <?php
                                foreach ($daftarkelas as $kelas) {
@@ -85,7 +86,7 @@
                         </div>
                     </div>
                     <div class="button text-right pb-3">
-                        <button type="submit" name="btnsbm" class="btn btn-secondary" >Submit</button>
+                        <button type="submit" name="btnsbm" class="btn btn-secondary">Submit</button>
                     </div>
                 </form>
             </div>
@@ -126,92 +127,119 @@
                 </div>
             </div>
             <div class="col">
-                <label for="nama" name="email">Nama Siswa    : 
+                <label for="nama" name="email">Nama Siswa :
                     <?php 
                         if (isset($_POST['email'])) {
                             echo $_POST["email"];
                         }
                         ?>
-                </label >
+                </label>
             </div>
             <div class="col">
-                <label for="kelas" name="kelas" >Kelas : 
+                <label for="kelas" name="kelas">Kelas :
                     <?php 
                         if (isset($_POST['kelas'])) {
                             echo $_POST["kelas"];
                         }
                         ?>
-                </label >
+                </label>
             </div>
 
             <h2></h2>
             <div class="col">
-                <label for="mtk" name="mtk" >Nilai Matematika   : 
+                <label for="mtk" name="mtk">Nilai Matematika :
                     <?php 
                         if (isset($_POST['mtk'])) {
                             echo $_POST["mtk"];
                         }
                         ?>
-                </label >
+                </label>
             </div>
             <div class="col">
-                <label for="fisika" name="fisika">Nilai Fisika   :
+                <label for="fisika" name="fisika">Nilai Fisika :
                     <?php 
                         if (isset($_POST['fisika'])) {
                             echo $_POST["fisika"];
                         }
                         ?>
-                </label >
+                </label>
             </div>
             <div class="col">
-                <label for="biologi" name="biologi">Nilai Biologi   : 
+                <label for="biologi" name="biologi">Nilai Biologi :
                     <?php 
                         if (isset($_POST['biologi'])) {
                             echo $_POST["biologi"];
                         }
                         ?>
-                </label >
+                </label>
             </div>
             <div class="col">
-                <label for="tik" name="tik">Nilai TIK   :
+                <label for="tik" name="tik">Nilai TIK :
                     <?php 
                         if (isset($_POST['tik'])) {
                             echo $_POST["tik"];
                         }
                         ?>
-                </label >
+                </label>
             </div>
 
             <h2></h2>
             <div class="col">
-                <label for="rata">Nilai Rata-Rata   :
+                <label for="rata">Nilai Rata-Rata :
                     <?php 
                         if (isset($_POST['btnsbm'])) {
                             echo rata();
                         }
                         ?>
-                </label >
+                </label>
             </div>
             <div class="col">
-                <label for="total">Total Nilai   : 
+                <label for="total">Total Nilai :
                     <?php 
                         if (isset($_POST['btnsbm'])) {
                             echo total();
                         }
                         ?>
-                </label >
+                </label>
             </div>
             <div class="col">
-                <label for="mtk">Grade Nilai   : 
+                <label for="mtk">Grade Nilai :
                     <?php 
                         if (isset($_POST['btnsbm'])) {
                             echo grade();
                         }
                         ?>
-                </label >
+                </label>
             </div>
         </div>
 
+        <!-- JSON -->
+        <?php
+         if (isset($_POST['btnsbm'])) {
+        
+        //ambil data
+        $file = "data/data.json" ;
+        //membaca isi
+        $isi = file_get_contents($file);
+        $data = json_decode($isi, true);
+
+        $data[] = array(
+             'Nama Siswa' => $_POST['email'],
+             'Kelas' => $_POST['kelas'],
+             'Nilai Matematika' => $_POST['mtk'],  
+             'Nilai Fisika' => $_POST['fisika'],  
+             'Nilai Biologi' => $_POST['biologi'],  
+             'Nilai Tik' => $_POST['tik'],
+             'Rata-Rata' => rata(),
+             'Total Nilai' => total(),
+             'Grade Nilai' => grade()
+        );
+
+        $jsonfile = json_encode($data, JSON_PRETTY_PRINT);
+        $isi = file_put_contents($file, $jsonfile);
+
+        }
+        ?>
     </div>
 </body>
 
