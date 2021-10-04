@@ -2,7 +2,11 @@
     font-family: verdana;
     font-size: 0.85em;
    } */
-   
+   a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
    .menu {
     display: block;
     background-color:#00A6BB;
@@ -230,4 +234,6 @@ img {vertical-align: middle;}
 }
 
 /* selesai profil singkat */
+
+
   
