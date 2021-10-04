@@ -1,7 +1,7 @@
-body {
+/* body {
     font-family: verdana;
     font-size: 0.85em;
-   }
+   } */
    
    .menu {
     display: block;
@@ -216,5 +216,18 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
-  
+
+/* Konten kanan */
+.isi-card-kanan {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Profil singkat */
+.judulprof {
+  margin-top: 2rem;
+ margin-bottom: 3rem;
+}
+
+/* selesai profil singkat */
   
