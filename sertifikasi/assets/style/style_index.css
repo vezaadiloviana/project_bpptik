@@ -9,7 +9,7 @@
 }
    .menu {
     display: block;
-    background-color:#00A6BB;
+    background-color:#1A4167;
     height:46px;
    }
    
@@ -39,13 +39,13 @@
    #navigasi a {
     display:block;
     padding:8px 16px;
-    background-color:#00A6BB;
+    background-color:#1A4167;
     color:#fff;
     text-decoration:none;
    }
    
    #navigasi a:hover {
-    background-color:#00BCD4;
+    background-color:#275d94;
     color:#fff;
    }
    
@@ -235,5 +235,17 @@ img {vertical-align: middle;}
 
 /* selesai profil singkat */
 
+.newsletter {
+  background-color: #1A4167;
+  color: white;
+}
 
+.kiri {
+  background-color: #1A4167;
+  color: white;
+}
   
+.konten-berita{
+  background-color: #1A4167;
+  color: white;
+}
